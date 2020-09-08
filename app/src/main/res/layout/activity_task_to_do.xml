@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".task.TaskToDo">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Tasks"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:fontFamily="@font/sbold">
+        </TextView>
+    </Toolbar>
+
+    <LinearLayout
+    android:id="@+id/linearlayout1"
+    android:layout_below="@id/toolbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="15.5dp">
+    <TextView
+        android:layout_below="@id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Name : "
+        android:fontFamily="@font/sbold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+        <TextView
+            android:id="@+id/myproject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="20dp"
+            android:text="ad"
+            android:textSize="20dp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_below="@id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15.5dp">
+        <TextView
+            android:layout_below="@id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description : "
+            android:fontFamily="@font/sbold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <TextView
+            android:id="@+id/mydescription"
+            android:layout_below="@id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Officeadd wdasdasork"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+    </LinearLayout>
+
+    <!--tab layout-->
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@+id/linearlayout2"
+        android:id="@+id/tablayout"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/white"
+        android:background="@color/black">
+    </com.google.android.material.tabs.TabLayout>
+
+    <!--view pager-->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tablayout"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+
+
+</RelativeLayout>
